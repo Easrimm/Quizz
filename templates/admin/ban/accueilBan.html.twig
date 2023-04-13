@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BanController!{% endblock %}
+
+{% block body %}
+<h1>Vous avez été banni</h1>
+<p>La raison : {{ban.raison}}</p>
+<p>Jusqu'au : {{ban.dateTimeFin|date("d/m/Y", "Europe/Paris")}}</p>
+<p>Contacter le support pour plus de précision ou pour un recours.</p>
+{% endblock %}

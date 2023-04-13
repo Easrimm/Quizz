@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* STYLE DU HEADER */
+
+header{
+    background-color: beige;
+    height: 6em;
+}
+
+header ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+header ul li{
+}
+
+/* STYLE DU FOOTER */
+
+footer{
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+footer ul li{
+}
+
+.footer__logo{
+    display: flex;
+    justify-content: center;
+}
+
+.footer__logo__img
+
+.footer__copyright{
+    text-align: center;
+}
+
+/* CLASSE APPLICABLES*/
+
+.hidden{
+    display: none;
+}
+
+/*********************/

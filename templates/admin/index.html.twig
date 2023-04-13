@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Tableau de bord{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style_admin.css') }}">
+{% endblock %}
+
+{% block body %}
+    <h1 class="admin__title">Ici réside tout votre pouvoir</h1>
+    <div id="btn_bannir" class="admin__ban">
+        <h2 class="admin__ban__name">Bannir un compte</h2>
+        <div class="hidden admin__ban__search">
+            <p class="admin__ban__search__text">Recherche par pseudo :</p>
+            <input class="admin__ban__search__input" type="text" name="pseudo">
+            <ul class="admin__ban__search__list">{{ include('admin/_listNotBan.html.twig') }}</ul>
+        </div>
+    </div>
+    <a href="{{ path('app_bannis') }}" id="btn_bannis" class="admin__banned">
+        <h2 class="admin__banned__name">Voir les bans</h2>
+    </a>
+{% endblock %}
+{% block javascripts %}
+    <script src="{{ asset('js/script_admin.js') }}"></script>
+{% endblock %}

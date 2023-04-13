@@ -1,0 +1,8 @@
+{% if listNotBan != null %}
+<h1 class="admin__ban__search__list__text">Personnes trouvées</h1>
+    {% for u in listNotBan %}
+        <li id="{{u.pseudo}}" class="admin__ban__search__list__elmt">
+            <p class="admin__ban__search__list__elmt__user">{{u.pseudo}}</p><a href="{{ path('app_bannir', { 'pseudo': u.pseudo }) }}" class="admin__ban__search__list__elmt">Bannir</a>
+        </li>
+    {% endfor %}
+{% endif %}

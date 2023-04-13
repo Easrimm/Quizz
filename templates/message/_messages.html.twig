@@ -1,0 +1,10 @@
+{% if messages %}
+    {% for m in messages %}
+        <li class="discusssion__message">
+            <p class="discussion__message__texte">{{m.envoyeur.pseudo}}: {{m.contenu}}</p>
+            <p class="discussion__message__datetime">{{m.datetime|date("d/m/Y", "Europe/Paris")}}</p>
+        </li>
+    {% endfor %}
+{% else %}
+    <li>Vous n'avez pas de message avec cet utilisateur.</li>
+{% endif %}

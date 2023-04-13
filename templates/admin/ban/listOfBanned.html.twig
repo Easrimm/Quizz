@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+    <h1>Liste des bannis</h1>
+    {% if bannis %}
+        <table>
+            <tr>
+                <td>Pseudo</td>
+                <td>Raison du ban</td>
+                <td>Fin du ban</td>
+            </tr>
+            {% for b in bannis %}
+                <tr>
+                    <td>{{b.pseudo}}</td>
+                    <td>{{b.banRecu.raison}}</td>
+                    <td>{{b.banRecu.dateTimeFin|date("d/m/Y", "Europe/Paris")}}</td>
+                </tr>
+            {% endfor %}
+    </table>
+    {% else %}
+    <h2>Pas de bannis pour le moment.</h2>
+    {% endif %}
+{% endblock %}

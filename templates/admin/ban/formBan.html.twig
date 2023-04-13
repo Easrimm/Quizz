@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire de ban ({{pseudo}}){% endblock %}
+
+{% block body %}
+    {{ form_start(banForm) }}
+    {{ form_row(banForm.raison) }}
+    {{ form_row(banForm.dateTimeFin) }}
+    <button type="submit" class="btn">Soumettre le ban</button>
+    {{ form_end(banForm) }}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Discussion avec {{contact.pseudo}}{% endblock %}
+
+{% block body %}
+    <h1 class="titre"></h1>
+    <ul id="discussion">
+    {{ include('message/_messages.html.twig') }}
+    </ul>
+    <form id="message">
+        <input type="text" name="message">
+    </form>
+    <button id="envoyer">Envoyer</button>
+{% endblock %}
+
+{% block javascripts %}
+    <script src="{{ asset('js/script_discussion.js') }}"></script>
+{% endblock %}

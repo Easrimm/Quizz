@@ -1,0 +1,9 @@
+{% if amis %}
+    {% for a in amis %}
+        <li id="{{a.pseudo}}">
+            <p>{{a.pseudo}}</p><button class="btn_supprimer">Supprimer</button><a href="{{ path('app_message', {'id': a.id}) }}" class="btn_discussion">Discussion</a></li>
+        </li> 
+    {% endfor %}
+{% else %}
+    Vous n'avez pas encore de contact.
+{% endif %}

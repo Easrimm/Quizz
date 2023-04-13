@@ -1,0 +1,8 @@
+{% if ajoutAmis != null %}
+<h1>Personnes trouvées</h1>
+    {% for a in ajoutAmis %}
+        <li id="{{a.pseudo}}">
+            <p>{{a.pseudo}}</p><button class="btn_ajouter">Ajouter</button>
+        </li>
+    {% endfor %}
+{% endif %}
